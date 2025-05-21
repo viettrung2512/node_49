@@ -13,9 +13,8 @@ CREATE TABLE `food` (
 
 DROP TABLE IF EXISTS `food_type`;
 CREATE TABLE `food_type` (
-  `type_id` int NOT NULL AUTO_INCREMENT,
-  `type_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`type_id`)
+  `type_id` int NOT NULL primary key AUTO_INCREMENT,
+  `type_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 DROP TABLE IF EXISTS `like_res`;
@@ -254,7 +253,7 @@ INSERT INTO `rate_res` (`rate_res_id`, `user_id`, `res_id`, `amount`, `date_rate
 (10, 1, 6, 99, '2023-01-10 12:38:41');
 
 INSERT INTO `restaurant` (`res_id`, `res_name`, `image`, `desciption`) VALUES
-(1, 'laudantium', 'tmp//5576ed1c9626480808732ad47f5e9cd1.jpg', 'Facilis voluptate quia quas unde. Facere omnis ut quo ex odit praesentium laborum.');
+(1, 'laudantium', 'tmp//5576ed1c9626430698732ad47f5e9cd1.jpg', 'Facilis voluptate quia quas unde. Facere omnis ut quo ex odit praesentium laborum.');
 INSERT INTO `restaurant` (`res_id`, `res_name`, `image`, `desciption`) VALUES
 (2, 'a', 'tmp//96e7b8175b5660ae0292450434ac1038.jpg', 'Accusamus et culpa dolorem est dolorem. Quidem et laboriosam velit aut nihil.');
 INSERT INTO `restaurant` (`res_id`, `res_name`, `image`, `desciption`) VALUES
@@ -526,11 +525,3 @@ INSERT INTO `users` (`user_id`, `full_name`, `email`, `password`) VALUES
 (8, 'vtrung6', 'vtrung6@gmail.com', '$2b$10$xRGLIahoFpFwvxwcRHQYQeO.W7B14ev1BXXIEVjfdGJj9vOajEKXK'),
 (9, 'vtrung7', 'vtrung7@gmail.com', '$2b$10$2B9ebxFuQKjfteNLXsJG2ehiu/DaY0C6mt1gSXlwnvH3B/48rIN9y');
 
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

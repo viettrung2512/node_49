@@ -2,10 +2,10 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express from "express";
-import rootRoute from "./routes/rootRoute.js";
+import rootRoute from "./src/routes/rootRoute.js";
 import cors from "cors";
-import "./models/connect.js";
-import { sequelize } from "./models/connect.js";
+import "./src/models/connect.js";
+import { sequelize } from "./src/models/connect.js";
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use(rootRoute);
 
-const port = 8080;
+const port = 3069;
 const server = app.listen(port, async () => {
     console.log(`Lắng nghe cổng http://localhost:${port} ...`);
     try {
